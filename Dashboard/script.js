@@ -31,7 +31,7 @@ function drawChart() {
     ]);
 
     var options = {
-        title: 'Statistics',
+        // title: 'Statistics',
         curveType: 'function',
         legend: { position: 'bottom' },
         vAxis: { ticks: [5, 10, 15, 20, 25] },
@@ -57,8 +57,8 @@ function drawChart1() {
     ]);
 
     var options = {
+        // title: 'Sales Distribution',
         pieSliceText: "none",
-        title: 'Sales Distribution',
         pieHole: 0.575,
         colors: ['#80E2FF', '#F49FA8', '#FFDF94', '#B5B3FB'],
         legend:{position:"bottom"}

@@ -313,8 +313,7 @@ main {
     display: flex;
     flex-direction: column;
     border-radius: 5px;
-    /* overflow: hidden; */
-    overflow: clip;
+    overflow: hidden;
 }
 
 .card-1 {
@@ -391,7 +390,7 @@ p {
 
 .card-3 p {
     margin-left: 0;
-    color: #4D4F5C;
+    color: #4d4f5c;
 }
 
 .utitle {
@@ -436,6 +435,9 @@ tr.title {
     position: relative;
 }
 
+.profile-info p{
+    color: #4D4F5C;
+}
 .edit {
     background-color: rebeccapurple;
     border-radius: 100%;
@@ -464,7 +466,7 @@ tr.title {
 }
 
 .ourusers {
-    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    border-top: 0.5px solid rgba(0, 0, 0, 0.05);
 }
 
 .user {
@@ -498,7 +500,7 @@ tr.title {
 
 .person-name {
     font-size: 12px;
-    color: rgba(0, 0, 0, 0.650);
+    color: #4D4F5C;
 }
 
 .location {
@@ -663,6 +665,7 @@ tr.title {
 
     .otitle p {
         font-size: 1.5rem;
+        color: #43425D;
     }
 
     .pname {
