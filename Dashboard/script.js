@@ -1,18 +1,17 @@
 function myFunction() {
     let dml = document.getElementById("dashboard").style.marginLeft || "0px";
-    let wd = document.getElementById("mySidebar").style.width || "0px";
+    let wd = document.getElementById("sidebar").style.width || "0px";
     if (wd === "0px") {
-        document.getElementById("mySidebar").style.width = "250px";
+        document.getElementById("sidebar").style.width = "250px";
         document.getElementById("dashboard").style.marginLeft = "250px";
         document.getElementById("dashboard").style.borderRadius = "20px 0 0 0";
     }
     else if (wd === "250px") {
-        document.getElementById("mySidebar").style.width = "0px";
+        document.getElementById("sidebar").style.width = "0px";
         document.getElementById("dashboard").style.marginLeft = "0px";
         document.getElementById("dashboard").style.borderRadius = "0px";
     }
 }
-
 document.getElementById("dashboard").style.borderRadius = "0px";
 
 // line chart
@@ -35,11 +34,77 @@ function drawChart() {
         title: 'Statistics',
         curveType: 'function',
         legend: { position: 'bottom' },
-        vAxis: { ticks: [5,10,15,20,25] },
-        colors:['#B5B3FB','#80E2FF'],
+        vAxis: { ticks: [5, 10, 15, 20, 25] },
+        colors: ['#B5B3FB', '#80E2FF'],
     };
 
     var chart = new google.visualization.LineChart(document.getElementById('curve_chart'));
 
     chart.draw(data, options);
+}
+
+//donut chart
+
+google.charts.load("current", { packages: ["corechart"] });
+google.charts.setOnLoadCallback(drawChart1);
+function drawChart1() {
+    var data = google.visualization.arrayToDataTable([
+        ['Country', 'Sales'],
+        ['France 4260 sales', 3],
+        ['Italy 3970 sales', 2],
+        ['Japan 5260 sales', 2],
+        ['Canada 3970 sales', 2]
+    ]);
+
+    var options = {
+        pieSliceText: "none",
+        title: 'Sales Distribution',
+        pieHole: 0.6,
+        colors: ['#80E2FF', '#F49FA8', '#FFDF94', '#B5B3FB'],
+        // legend:{position:"bottom"},
+    };
+
+    var chart = new google.visualization.PieChart(document.getElementById('donutchart'));
+    chart.draw(data, options);
+}
+
+// dropdown by click under 1024px
+
+// document.getElementById("dropdown-menu").style.display = "none";
+
+function profileNav() {
+    let dropToggle = document.getElementById("dropdown-menu").style.display;
+    if(window.innerWidth <= 1024)
+    {
+        if(dropToggle == "none") {
+            document.getElementById("dropdown-menu").style.display = "block";
+            document.getElementById("drop-arrow").style.display = "block";
+            document.getElementById("drop-arrow").style.transform = "rotate(-180deg)";
+            document.getElementById("drop-arrow").style.transitionDuration = "0.1s";
+            document.getElementById("drop-arrow").style.marginTop = "2px";
+        }
+        else {
+            document.getElementById("dropdown-menu").style.display = "none";
+            document.getElementById("drop-arrow").style.transform = "rotate(0deg)";
+            document.getElementById("drop-arrow").style.marginTop = "-2px";
+        }
+    }
+}
+
+// document.getElementById("noti-dropdown-menu").style.display = "none";
+
+function notiNav() {
+    let notiToggle = document.getElementById("noti-dropdown-menu").style.display;
+    if(window.innerWidth <= 1024)
+    {
+        
+        if(notiToggle == "none") {
+            document.getElementById("noti-dropdown-menu").style.display = "block";
+            document.getElementById("green").style.display = "none";
+        }
+        else {
+            document.getElementById("noti-dropdown-menu").style.display = "none";
+            document.getElementById("green").style.display = "block";
+        }
+    }
 }

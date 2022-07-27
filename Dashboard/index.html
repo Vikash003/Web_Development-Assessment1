@@ -10,8 +10,8 @@
 
 <body>
     <div class="container">
-        <div id="mySidebar" class="sidebar">
-            <div class="nav"><img src="images/logo.svg" width="80" height="18" alt=""></div>
+        <div id="sidebar" class="sidebar">
+            <div class="side-nav"><img src="images/logo.svg" width="80" height="18" alt=""></div>
             <div class="sidebar-item"><img src="images/icon_home.svg" alt="">
                 <p>Home</p>
             </div>
@@ -40,11 +40,11 @@
                     </div>
                 </div>
                 <div class="right-nav">
-                    <div class="notification">
+                    <div class="notification" onclick="notiNav()">
                         <a href="#"><img src="images/notification.svg" alt="">
-                            <div class="green"></div>
+                            <div class="green" id="green"></div>
                         </a>
-                        <div class="noti-dropdown-menu">
+                        <div class="noti-dropdown-menu" id="noti-dropdown-menu">
                             <div class="notis">
                                 <div class="noti noti1">
                                     <div class="dp">
@@ -92,14 +92,14 @@
                             <div class="show">Show more</div>
                         </div>
                     </div>
-                    <div class="drop">
-                        <a href="">
+                    <div class="drop" onclick="profileNav()" >
+                        <a href="#">
                             <div class="pname">John Doe
                             </div>
-                            <div class="drop-arrow"><img src="images/small-down.svg" alt=""></div>
+                            <div class="drop-arrow" id="drop-arrow"><img src="images/small-down.svg" alt=""></div>
                             <div class="profile-pic"><img src="images/Avatar.png" alt=""></div>
                         </a>
-                        <div class="dropdown-menu">
+                        <div class="dropdown-menu" id="dropdown-menu">
                             <div class="dropdown-button"><a href="#">
                                     <img src="images/icon-my-profile@2x.png" width="20px" height="20px" alt="">
                                     <p>My Profile</p>
@@ -221,7 +221,8 @@
                                                     <div class="location">United States</div>
                                                 </div>
                                             </div>
-                                            <div class="user-right">Mobile : 8715674877</div>
+                                            <div class="user-right-des">Mobile : 8715674877</div>
+                                            <div class="user-right user-right-mob">Mob : 8715674877</div>
                                         </div>
                                         <div class="user user2">
                                             <div class="user-left"><img src="images/profile-pic-2.png" width="30px"
@@ -231,7 +232,8 @@
                                                     <div class="location">United States</div>
                                                 </div>
                                             </div>
-                                            <div class="user-right">Mobile : 8715674877</div>
+                                            <div class="user-right-des">Mobile : 8715674877</div>
+                                            <div class="user-right user-right-mob">Mob : 8715674877</div>
                                         </div>
                                         <div class="user user3">
                                             <div class="user-left"><img src="images/profile-pic.png" width="30px"
@@ -241,14 +243,15 @@
                                                     <div class="location">United States</div>
                                                 </div>
                                             </div>
-                                            <div class="user-right">Mobile : 8715674877</div>
+                                            <div class="user-right-des">Mobile : 8715674877</div>
+                                            <div class="user-right user-right-mob">Mob : 8715674877</div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                             <div class="card card-4">
                                 <p>Product Video</p>
-                                <iframe width="350" height="230" src="https://www.youtube.com/embed/Oy6hk6Y7VHQ"
+                                <iframe width="350" height="230" 
                                     title="YouTube video player" frameborder="0"
                                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                                     allowfullscreen></iframe>
@@ -261,32 +264,5 @@
     </div>
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
     <script src="script.js"></script>
-    <script>
-        //donut chart
-
-        google.charts.load("current", { packages: ["corechart"] });
-        google.charts.setOnLoadCallback(drawChart);
-        function drawChart() {
-            var data = google.visualization.arrayToDataTable([
-                ['Country', 'Sales'],
-                ['France 4260 sales', 3],
-                ['Italy 3970 sales', 2],
-                ['Japan 5260 sales', 2],
-                ['Canada 3970 sales', 2]
-            ]);
-
-            var options = {
-                pieSliceText: "none",
-                title: 'Sales Distribution',
-                pieHole: 0.6,
-                colors: ['#80E2FF', '#F49FA8', '#FFDF94', '#B5B3FB'],
-            };
-
-            var chart = new google.visualization.PieChart(document.getElementById('donutchart'));
-            chart.draw(data, options);
-
-        }
-    </script>
 </body>
-
 </html>
