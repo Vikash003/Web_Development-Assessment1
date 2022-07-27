@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>dashboard</title>
+    <link rel="stylesheet" href="css-reset.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div id="mySidebar" class="sidebar">
+            <div class="nav"><img src="images/logo.svg" width="80" height="18" alt=""></div>
+            <div class="sidebar-item"><img src="images/icon_home.svg" alt="">
+                <p>Home</p>
+            </div>
+            <div class="sidebar-item item-selected"><img src="images/icon_dashboard.svg" alt="">
+                <p>Dashboard</p>
+            </div>
+            <div class="sidebar-item"><img src="images/icon_inbox.svg" alt="">
+                <p>Inbox</p>
+                <div class="new">new</div>
+            </div>
+            <div class="sidebar-item"><img src="images/icon_products.svg" alt="">
+                <p>Products</p>
+            </div>
+            <div class="sidebar-item"><img src="images/icon_admin.svg" alt="">
+                <p>Admin</p>
+            </div>
+        </div>
+        <div class="dashboard" id="dashboard">
+            <nav>
+                <div class="left-nav">
+                    <div onclick="myFunction()" class="menu-icon"><a href="#"><img src="images/menu.svg" alt=""></a>
+                    </div>
+                    <div class="search-icon"><img src="images/icon_search.svg" alt=""></div>
+                    <div class="search-text">
+                        <p>Search transactions, invoices or help</p>
+                    </div>
+                </div>
+                <div class="right-nav">
+                    <div class="notification">
+                        <a href="#"><img src="images/notification.svg" alt="">
+                            <div class="green"></div>
+                        </a>
+                        <div class="noti-dropdown-menu">
+                            <div class="notis">
+                                <div class="noti noti1">
+                                    <div class="dp">
+                                        <img src="images/profile-pic-1.png" width="30px" height="30px" alt="">
+                                    </div>
+                                    <div class="noti-top">
+                                        <div class="noti-info">
+                                            <div class="noti-left">
+                                                <div class="person-name">Bavid Kames</div>
+                                            </div>
+                                            <div class="noti-right">2 mins ago</div>
+                                        </div>
+                                        <div class="task">Assigned you on the call with Sara</div>
+                                    </div>
+                                </div>
+                                <div class="noti noti2">
+                                    <div class="dp">
+                                        <img src="images/profile-pic-alexa.png" width="30px" height="30px" alt="">
+                                    </div>
+                                    <div class="noti-top">
+                                        <div class="noti-info">
+                                            <div class="noti-left">
+                                                <div class="person-name">Alexa Marry</div>
+                                            </div>
+                                            <div class="noti-right" style="margin-left: 105px;">5 mins ago</div>
+                                        </div>
+                                        <div class="task">Marked the task New UI as done</div>
+                                    </div>
+                                </div>
+                                <div class="noti noti3">
+                                    <div class="dp">
+                                        <img src="images/profile-pic-eva.png" width="30px" height="30px" alt="">
+                                    </div>
+                                    <div class="noti-top">
+                                        <div class="noti-info">
+                                            <div class="noti-left">
+                                                <div class="person-name">Eva Maria</div>
+                                            </div>
+                                            <div class="noti-right" style="margin-left: 110px;">10 mins ago</div>
+                                        </div>
+                                        <div class="task">Added a new comment on Sales task</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="show">Show more</div>
+                        </div>
+                    </div>
+                    <div class="drop">
+                        <a href="">
+                            <div class="pname">John Doe
+                            </div>
+                            <div class="drop-arrow"><img src="images/small-down.svg" alt=""></div>
+                            <div class="profile-pic"><img src="images/Avatar.png" alt=""></div>
+                        </a>
+                        <div class="dropdown-menu">
+                            <div class="dropdown-button"><a href="#">
+                                    <img src="images/icon-my-profile@2x.png" width="20px" height="20px" alt="">
+                                    <p>My Profile</p>
+                                </a></div>
+                            <div class="dropdown-button"><a href="#">
+                                    <img src="images/icon-billing@2x.png" width="20px" height="20px" alt="">
+                                    <p>Billing</p>
+                                </a></div>
+                            <div class="dropdown-button"><a href="#">
+                                    <img src="images/icon-logout@2x.png" width="20px" height="20px" alt="">
+                                    <p>Log Out</p>
+                                </a></div>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+            <hr>
+            <div class="dash">
+                <div class="dash-content">
+                    <div class="head">
+                        <div class="otitle">
+                            <p>Overview</p>
+                        </div>
+                        <div class="funds-button"><a href="#">
+                                <p>Add Funds</p>
+                                <img src="images/plus@2x.png" alt="" width="20px" height="20px">
+                            </a></div>
+                    </div>
+                    <div class="content-layout">
+                        <main>
+                            <div class="card card-1">
+                                <div id="curve_chart" style="width: auto; height: 300px;"></div>
+                            </div>
+                            <div class="card card-2">
+                                <div id="donutchart" style="width: 400px; height: 400px;"></div>
+                                <div class="inside-text">
+                                    <p>230,900</p>
+                                    <p>Sales</p>
+                                </div>
+                            </div>
+                            <div class="card card-3">
+                                <p>Referer</p>
+                                <table>
+                                    <tr class="title">
+                                        <th>Location</th>
+                                        <th>Views</th>
+                                        <th>Sales</th>
+                                        <th>Conversion</th>
+                                        <th>Total</th>
+                                    </tr>
+                                    <tr>
+                                        <td>google.com</td>
+                                        <td>3746</td>
+                                        <td>752</td>
+                                        <td>43%</td>
+                                        <td>$19,291</td>
+                                    </tr>
+                                    <tr>
+                                        <td>facebook.com</td>
+                                        <td>8126</td>
+                                        <td>728</td>
+                                        <td>32%</td>
+                                        <td>$17,638</td>
+                                    </tr>
+                                    <tr>
+                                        <td>twitter.com</td>
+                                        <td>8836</td>
+                                        <td>694</td>
+                                        <td>28%</td>
+                                        <td>$16,218</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Direct, email, IM</td>
+                                        <td>1173</td>
+                                        <td>645</td>
+                                        <td>24%</td>
+                                        <td>$14,421</td>
+                                    </tr>
+                                    <tr>
+                                        <td>linkedin.com</td>
+                                        <td>2739</td>
+                                        <td>539</td>
+                                        <td>20%</td>
+                                        <td>$12,370</td>
+                                    </tr>
+                                    <tr>
+                                        <td>instagram.com</td>
+                                        <td>2739</td>
+                                        <td>539</td>
+                                        <td>20%</td>
+                                        <td>$12,370</td>
+                                    </tr>
+                                </table>
+                                <a href="#">show more</a>
+                            </div>
+                            <div class="card card-5">
+                                <div class="profile-info">
+                                    <img src="images/profile@2x.png" width="70px" alt="">
+                                    <img class="edit" src="images/edit.svg" width="15px" alt="">
+                                    <p>Nick Herasimenka</p>
+                                    <p style="color:rgba(0, 0, 0, 0.5);font-size: 12px;">United States</p>
+                                    <div class="socialmedia">
+                                        <img src="images/twitter.svg" alt="">
+                                        <img src="images/facebook.svg" alt="">
+                                        <img src="images/linkedin.svg" alt="">
+                                        <img src="images/whatsapp.svg" alt="">
+                                    </div>
+                                </div>
+                                <div class="ourusers">
+                                    <div class="utitle">
+                                        <p>Our Users</p><img src="images/options.svg" alt="">
+                                    </div>
+                                    <div class="users">
+                                        <div class="user user1">
+                                            <div class="user-left"><img src="images/profile-pic-1.png" width="30px"
+                                                    height="30px" alt="">
+                                                <div class="name-location">
+                                                    <div class="person-name">Drew James</div>
+                                                    <div class="location">United States</div>
+                                                </div>
+                                            </div>
+                                            <div class="user-right">Mobile : 8715674877</div>
+                                        </div>
+                                        <div class="user user2">
+                                            <div class="user-left"><img src="images/profile-pic-2.png" width="30px"
+                                                    height="30px" alt="">
+                                                <div class="name-location">
+                                                    <div class="person-name">Bavid Kames</div>
+                                                    <div class="location">United States</div>
+                                                </div>
+                                            </div>
+                                            <div class="user-right">Mobile : 8715674877</div>
+                                        </div>
+                                        <div class="user user3">
+                                            <div class="user-left"><img src="images/profile-pic.png" width="30px"
+                                                    height="30px" alt="">
+                                                <div class="name-location">
+                                                    <div class="person-name">Lavid Emes</div>
+                                                    <div class="location">United States</div>
+                                                </div>
+                                            </div>
+                                            <div class="user-right">Mobile : 8715674877</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card card-4">
+                                <p>Product Video</p>
+                                <iframe width="350" height="230" src="https://www.youtube.com/embed/Oy6hk6Y7VHQ"
+                                    title="YouTube video player" frameborder="0"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                    allowfullscreen></iframe>
+                            </div>
+                        </main>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script src="script.js"></script>
+    <script>
+        //donut chart
+
+        google.charts.load("current", { packages: ["corechart"] });
+        google.charts.setOnLoadCallback(drawChart);
+        function drawChart() {
+            var data = google.visualization.arrayToDataTable([
+                ['Country', 'Sales'],
+                ['France 4260 sales', 3],
+                ['Italy 3970 sales', 2],
+                ['Japan 5260 sales', 2],
+                ['Canada 3970 sales', 2]
+            ]);
+
+            var options = {
+                pieSliceText: "none",
+                title: 'Sales Distribution',
+                pieHole: 0.6,
+                colors: ['#80E2FF', '#F49FA8', '#FFDF94', '#B5B3FB'],
+            };
+
+            var chart = new google.visualization.PieChart(document.getElementById('donutchart'));
+            chart.draw(data, options);
+
+        }
+    </script>
+</body>
+
+</html>
