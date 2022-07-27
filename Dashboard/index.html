@@ -92,7 +92,7 @@
                             <div class="show">Show more</div>
                         </div>
                     </div>
-                    <div class="drop" onclick="profileNav()" >
+                    <div class="drop" onclick="profileNav()">
                         <a href="#">
                             <div class="pname">John Doe
                             </div>
@@ -131,9 +131,16 @@
                     <div class="content-layout">
                         <main>
                             <div class="card card-1">
+                                <div class="title">
+                                    <p>Statistics</p>
+                                    <div class="right-title">
+                                        <p>Last 6 months</p><img src="images/small-down.svg" alt="">
+                                    </div>
+                                </div>
                                 <div id="curve_chart" style="width: auto; height: 300px;"></div>
                             </div>
                             <div class="card card-2">
+                                <p>Sales Distribution</p>
                                 <div id="donutchart" style="width: auto; height: 300px;"></div>
                                 <div class="inside-text">
                                     <p>230,900</p>
@@ -250,11 +257,10 @@
                                 </div>
                             </div>
                             <div class="card card-4">
-                                <p>Product Video</p>
-                                <iframe width="350" height="230" src=""
-                                    title="YouTube video player" frameborder="0"
-                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                    allowfullscreen></iframe>
+                                <div class="ptitle">
+                                    <p>Product Video</p><img src="images/options.svg" alt="">
+                                </div>
+                                <img src="images/thumbnail@2x.png" width="350" height="230" alt="">
                             </div>
                         </main>
                     </div>
@@ -265,4 +271,5 @@
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
     <script src="script.js"></script>
 </body>
+
 </html>

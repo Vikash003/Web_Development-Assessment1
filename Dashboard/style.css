@@ -359,13 +359,61 @@ main {
     padding: 5px;
 }
 
-.card-4 p {
-    margin-right: auto;
-    margin-left: 23px;
+.card-1 .title{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    padding-bottom: 0;
+    z-index: 2;
+    margin-bottom: -30px;
 }
 
-.card-4 iframe{
-    border-radius: 10px;
+.card-1 .title p{
+    margin:0;
+    color: #4D4F5C;
+    font-weight: 400;
+}
+
+.right-title{
+    display: flex;
+    margin-left: 140px;
+}
+
+.right-title p{
+    color: #4D4F5C;
+    font-weight: 400;
+}
+
+.card-2 p{
+    color: #4D4F5C;
+    z-index: 2;
+    margin-bottom: -30px;
+    margin-right: auto;
+    font-weight: 400;
+}
+
+.ptitle{
+    display: flex;
+    padding:15px;
+}
+
+.ptitle p {
+    margin: 0;
+    margin-left: 23px;
+    color: #4d4f5c;
+    font-weight: 400;
+}
+
+.ptitle img{
+    width: 15px;
+    height: auto;
+    margin-left: 220px;
+    /* margin-right: 25px; */
+}
+
+.card-4 img{
+    border-radius: 6px;
 }
 
 .card-3 a {
@@ -698,7 +746,7 @@ tr.title {
         order: 1;
     }
 
-    .card-4 p {
+    .ptitle p {
         margin-right: auto;
         margin-left: 3px;
     }
