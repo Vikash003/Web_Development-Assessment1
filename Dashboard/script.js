@@ -50,18 +50,18 @@ google.charts.setOnLoadCallback(drawChart1);
 function drawChart1() {
     var data = google.visualization.arrayToDataTable([
         ['Country', 'Sales'],
-        ['France 4260 sales', 3],
-        ['Italy 3970 sales', 2],
-        ['Japan 5260 sales', 2],
-        ['Canada 3970 sales', 2]
+        ['France', 3],
+        ['Italy', 2],
+        ['Japan', 2],
+        ['Canada', 2]
     ]);
 
     var options = {
         pieSliceText: "none",
         title: 'Sales Distribution',
-        pieHole: 0.6,
+        pieHole: 0.575,
         colors: ['#80E2FF', '#F49FA8', '#FFDF94', '#B5B3FB'],
-        // legend:{position:"bottom"},
+        legend:{position:"bottom"}
     };
 
     var chart = new google.visualization.PieChart(document.getElementById('donutchart'));

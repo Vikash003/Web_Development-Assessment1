@@ -70,7 +70,7 @@ body {
     height: 100%;
     transition: margin-left .5s;
     z-index: 1;
-    overflow: hidden;
+    overflow: clip;
     background: #F5F7FB 0% 0% no-repeat padding-box;
     border-radius: 20px 0 0 0;
 }
@@ -84,6 +84,10 @@ nav {
     justify-content: center;
     align-items: center;
     padding: 13px;
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 10;
 }
 
 .left-nav {
@@ -223,6 +227,7 @@ nav {
     width: 100%;
     height: 100%;
     padding: 30px;
+    /* margin-top: 60px; */
 }
 
 .dash-content {
@@ -308,7 +313,8 @@ main {
     display: flex;
     flex-direction: column;
     border-radius: 5px;
-    overflow: hidden;
+    /* overflow: hidden; */
+    overflow: clip;
 }
 
 .card-1 {
@@ -372,7 +378,6 @@ main {
     position: absolute;
     z-index: 1;
     text-align: center;
-    margin-right: 86px;
 }
 
 .card-2 .inside-text p {
@@ -386,6 +391,7 @@ p {
 
 .card-3 p {
     margin-left: 0;
+    color: #4D4F5C;
 }
 
 .utitle {
@@ -412,6 +418,8 @@ th {
 
 td {
     border-bottom: 1px solid #dddddd;
+    color: #4d4f5cd2;
+    font-size: 10px;
 }
 
 tr.title {
@@ -610,7 +618,7 @@ tr.title {
     html,
     body {
         max-width: 100%;
-        overflow-x: hidden;
+        overflow-x: clip;
     }
 
     main {
@@ -623,6 +631,13 @@ tr.title {
         padding: 30px 20px;
     }
 
+    /* nav{
+        position: sticky;
+        top: 0;
+        left: 0;
+        z-index: 10;
+    } */
+
     .main {
         grid-gap: 40px;
     }
@@ -630,7 +645,8 @@ tr.title {
     .dashboard {
         width: 100%;
         border-radius: 0 !important;
-        overflow-x: hidden !important;
+        /* overflow-x: hidden !important; */
+        overflow-x: clip !important;
     }
 
     .dropdown-menu {
