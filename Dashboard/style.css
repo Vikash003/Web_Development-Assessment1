@@ -296,7 +296,7 @@ hr {
     display: flex;
     justify-content: center;
     /* align-items: center; */
-    min-height: 100vh;
+    min-height: 100%;
     padding-top: 20px;
 }
 
@@ -396,6 +396,8 @@ main {
 .ptitle{
     display: flex;
     padding:15px;
+    justify-content: space-between;
+    width: 100%;
 }
 
 .ptitle p {
@@ -407,12 +409,16 @@ main {
 
 .ptitle img{
     width: 15px;
-    height: auto;
-    margin-left: 220px;
+    height: 15px;
 }
 
-.card-4 img{
-    border-radius: 6px;
+.proimg {
+    background-image: url("images/thumbnail@2x.png");
+    min-width: 320px;
+    min-height: 200px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 10px;
 }
 
 .card-3 a {
