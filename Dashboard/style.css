@@ -426,6 +426,35 @@ main {
     background-size: cover;
     background-repeat: no-repeat;
     border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.play-shadow{
+    background-color: rgba(255, 255, 255, 0.4);
+    width: 54px;
+    height: 54px;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.play-shadow:hover{
+    width: 63px;
+    height: 63px;
+    transition-duration: 0.1s;
+}
+
+.play-button {
+    background-color: #FFFFFF;
+    width: 45px;
+    height: 45px;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .card-3 a {
