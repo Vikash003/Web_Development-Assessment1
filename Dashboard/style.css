@@ -126,7 +126,7 @@ nav {
 
 /* notification */
 .notification {
-    margin-right: 15px;
+    margin-right: 10px;
 }
 
 .notification a {
@@ -255,7 +255,7 @@ nav {
 
 .otitle p{
     color: #43425D;
-    font-weight: bold;
+    font-weight: 550;
     font-size: 1.5rem;
 }
 
@@ -301,7 +301,7 @@ hr {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-left: 20px;
+    margin-left: 18px;
 }
 
 /* dashboard layout using grid */
