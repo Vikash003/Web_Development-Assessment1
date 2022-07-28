@@ -143,15 +143,18 @@ nav {
     display: none;
     position: absolute;
     z-index: 1;
-    overflow: hidden;
-    box-shadow: 1px 0 3px rgba(0, 0, 0, 0.3);
-    background-color: white;
     margin-left: -200px;
-    margin-top: 16px;
+    padding-top: 16px;
+}
+
+.noti-drop-container {
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
     border-radius: 10px;
+    overflow: hidden;
 }
 
 .show {
+    background-color: white;
     color: #3B86FF;
     border-top: 1px solid rgba(0, 0, 0, 0.2);
     padding: 10px 0 10px 22px;
@@ -159,6 +162,7 @@ nav {
 }
 
 .noti {
+    background-color: white;
     display: flex;
     padding: 10px;
 }
@@ -203,10 +207,13 @@ nav {
     position: absolute;
     z-index: 1;
     margin-left: -55px;
-    margin-top: 13px;
+    padding-top: 15px;
+}
+
+.drop-container{
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
     border-radius: 10px;
     overflow: hidden;
-    box-shadow: 1px 0 3px rgba(0, 0, 0, 0.3);
 }
 
 .dropdown-button {
