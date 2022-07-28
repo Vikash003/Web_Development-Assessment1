@@ -148,7 +148,7 @@ nav {
     display: none;
     position: absolute;
     z-index: 1;
-    margin-left: -230px;
+    margin-left: -225px;
     padding-top: 18px;
 }
 
@@ -770,7 +770,7 @@ tr.title {
     }
 
     .dropdown-menu {
-        margin-left: -120px;
+        margin-left: -135px;
     }
 
     .search-text {
