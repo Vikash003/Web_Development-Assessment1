@@ -37,8 +37,8 @@ function drawChart() {
         colors: ['#B5B3FB', '#80E2FF'],
         pointSize: 4,
         pointShape: 'circle',
-        areaOpacity: 0.15,
-        type: 'area'
+        // areaOpacity: 0.15,
+        // type: 'area'
     };
 
     var chart = new google.visualization.LineChart(document.getElementById('curve_chart'));
