@@ -32,13 +32,13 @@ function drawChart() {
 
     var options = {
         curveType: 'function',
-        legend: { position: 'bottom'},
+        legend: { position: 'bottom' },
         vAxis: { ticks: [5, 10, 15, 20, 25] },
-        colors: ['#B5B3FB','#80E2FF'],
+        colors: ['#B5B3FB', '#80E2FF'],
         pointSize: 4,
         pointShape: 'circle',
         areaOpacity: 0.15,
-        type:'area'
+        type: 'area'
     };
 
     var chart = new google.visualization.LineChart(document.getElementById('curve_chart'));
@@ -64,7 +64,7 @@ function drawChart1() {
         pieSliceText: "none",
         pieHole: 0.575,
         colors: ['#80E2FF', '#F49FA8', '#FFDF94', '#B5B3FB'],
-        legend:{position:"bottom"},
+        legend: { position: "bottom" },
         pieStartAngle: -40
     };
 
@@ -78,13 +78,11 @@ function drawChart1() {
 
 function profileNav() {
     let dropToggle = document.getElementById("dropdown-menu").style.display;
-    if(window.innerWidth <= 1024)
-    {
-        if(dropToggle == "none") {
+    if (window.innerWidth <= 1024) {
+        if (dropToggle == "none") {
             document.getElementById("dropdown-menu").style.display = "block";
             document.getElementById("drop-arrow").style.display = "block";
             document.getElementById("drop-arrow").style.transform = "rotate(-180deg)";
-            document.getElementById("drop-arrow").style.transitionDuration = "0.1s";
             document.getElementById("drop-arrow").style.marginTop = "2px";
         }
         else {
@@ -99,10 +97,9 @@ function profileNav() {
 
 function notiNav() {
     let notiToggle = document.getElementById("noti-dropdown-menu").style.display;
-    if(window.innerWidth <= 1024)
-    {
-        
-        if(notiToggle == "none") {
+    if (window.innerWidth <= 1024) {
+
+        if (notiToggle == "none") {
             document.getElementById("noti-dropdown-menu").style.display = "block";
             document.getElementById("green").style.display = "none";
         }

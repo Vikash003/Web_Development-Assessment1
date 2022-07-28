@@ -127,7 +127,6 @@ nav {
 /* notification */
 .notification {
     margin-right: 15px;
-    display: flex;
 }
 
 .notification a {
@@ -148,8 +147,8 @@ nav {
     display: none;
     position: absolute;
     z-index: 1;
-    margin-left: -200px;
-    padding-top: 16px;
+    margin-left: -250px;
+    padding-top: 18px;
 }
 
 .noti-drop-container {
@@ -751,7 +750,7 @@ tr.title {
     }
 
     .drop-arrow{
-        display: none;
+        display: none !important;
     }
 
     .main {
@@ -766,11 +765,7 @@ tr.title {
     }
 
     .dropdown-menu {
-        margin-left: -100px;
-    }
-
-    .noti-dropdown-menu {
-        margin-left: -215px;
+        margin-left: -130px;
     }
 
     .search-text {
