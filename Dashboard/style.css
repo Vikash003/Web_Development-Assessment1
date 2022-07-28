@@ -98,6 +98,7 @@ nav {
     display: flex;
     margin-left: auto;
     align-items: center;
+    margin-right: 17px;
 }
 
 .menu-icon{
@@ -394,7 +395,7 @@ main {
 
 .right-title{
     display: flex;
-    margin-left: 120px;
+    margin-left: 100px;
 }
 
 .right-title p{
@@ -740,6 +741,10 @@ tr.title {
         padding: 30px 20px;
     }
 
+    .right-nav {
+        margin-right: 7px;
+    }
+
     .search-icon-left{
         display: none;
     }
@@ -765,7 +770,7 @@ tr.title {
     }
 
     .dropdown-menu {
-        margin-left: -130px;
+        margin-left: -120px;
     }
 
     .search-text {
