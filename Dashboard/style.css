@@ -613,12 +613,12 @@ tr.title {
     color: rgba(0, 0, 0, 0.450);
 }
 
-/* media query 1025 */
+/* media query 1025 - Desktop View */
 @media (min-width: 1025px){
     .drop:hover .dropdown-menu {
         display: block ;
     }
-    
+
     .drop:hover a .drop-arrow {
         transform: rotate(-180deg);
         transition-duration: 0.1s;
@@ -627,13 +627,13 @@ tr.title {
     .notification:hover .noti-dropdown-menu {
         display: block;
     }
-    
+
     .notification:hover a .green {
         display: none;
     }
 }
 
-/* media query 1024 */
+/* media query 1024 - Laptop View */
 @media (max-width: 1024px) {
 
     main {
@@ -674,7 +674,7 @@ tr.title {
     }
 }
 
-/* media query 768 */
+/* media query 768 - Tablet View */
 @media (max-width: 768px) {
     main {
         margin-top: 20px;
@@ -719,7 +719,7 @@ tr.title {
     }
 }
 
-/* media query 452 */
+/* media query 452 - Mobile View */
 @media (max-width: 452px) {
 
     html,body {
