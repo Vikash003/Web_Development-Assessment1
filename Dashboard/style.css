@@ -113,7 +113,8 @@ nav {
 
 .search-text {
     font-size: 0.8rem;
-    color: rgba(0, 0, 0, 0.5);
+    color: #4d4f5cd3;
+    font-weight: 350;
 }
 
 .search-icon {
@@ -378,18 +379,22 @@ main {
 
 .card-1 .title p{
     margin:0;
-    color: #4D4F5C;
+    color: #4d4f5c;
     font-weight: 400;
 }
 
 .right-title{
     display: flex;
-    margin-left: 140px;
+    margin-left: 120px;
 }
 
 .right-title p{
     color: #4D4F5C;
     font-weight: 400;
+}
+
+.right-title img {
+    margin-left: 7px;
 }
 
 .card-2 p{

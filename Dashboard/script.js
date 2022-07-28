@@ -31,11 +31,14 @@ function drawChart() {
     ]);
 
     var options = {
-        // title: 'Statistics',
         curveType: 'function',
-        legend: { position: 'bottom' },
+        legend: { position: 'bottom'},
         vAxis: { ticks: [5, 10, 15, 20, 25] },
-        colors: ['#B5B3FB', '#80E2FF'],
+        colors: ['#B5B3FB','#80E2FF'],
+        pointSize: 4,
+        pointShape: 'circle',
+        areaOpacity: 0.15,
+        type:'area'
     };
 
     var chart = new google.visualization.LineChart(document.getElementById('curve_chart'));
@@ -61,7 +64,8 @@ function drawChart1() {
         pieSliceText: "none",
         pieHole: 0.575,
         colors: ['#80E2FF', '#F49FA8', '#FFDF94', '#B5B3FB'],
-        legend:{position:"bottom"}
+        legend:{position:"bottom"},
+        pieStartAngle: -40
     };
 
     var chart = new google.visualization.PieChart(document.getElementById('donutchart'));
