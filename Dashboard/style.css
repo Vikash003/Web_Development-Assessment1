@@ -2,14 +2,17 @@
     box-sizing: border-box;
     font-family: 'Source Sans Pro', sans-serif;
 }
+
 body {
-    background-color: #43425D;
+    /* background-color: #3C3B54; */
     height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
 }
+
 .container {
+    background-color: #3C3B54;
     width: 100%;
 }
 
@@ -86,6 +89,7 @@ nav {
     top: 0;
     left: 0;
     z-index: 10;
+    border-bottom: 0.5px solid rgba(0, 0, 0, 0.2);
 }
 
 .left-nav {
@@ -126,21 +130,36 @@ nav {
 
 /* notification */
 .notification {
-    margin-right: 10px;
+    /* margin-right: 5px; */
 }
 
 .notification a {
     position: relative;
+    color:#3B86FF;
+    cursor: pointer;
+}
+
+.notification a img {
+    border-radius: 20px;
+    padding: 6px;
+}
+
+.notification:hover a img {
+    background-color: rgba(0, 0, 0, 0.03);
 }
 
 .green {
     display: block;
-    border: 3px solid #81E37A;
+    height: 9px;
+    width: 9px;
+    /* border: 3px solid #81E37A; */
+    background-color: #81E37A;;
+    border: 1px solid white;
     border-radius: 5px;
     position: absolute;
     z-index: 1;
-    left: 12.5px;
-    bottom: 18.5px;
+    left: 17px;
+    bottom: 23.5px;
 }
 
 .noti-dropdown-menu {
@@ -148,21 +167,26 @@ nav {
     position: absolute;
     z-index: 1;
     margin-left: -225px;
-    padding-top: 18px;
+    padding-top: 11px;
 }
 
 .noti-drop-container {
+    background-color: white;
     box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
     border-radius: 10px;
     overflow: hidden;
 }
 
 .show {
-    background-color: white;
-    color: #3B86FF;
     border-top: 1px solid rgba(0, 0, 0, 0.2);
-    padding: 10px 0 10px 22px;
+    padding: 10px 0;
     font-size: 13px;
+    display: flex;
+    justify-content: center;
+}
+
+.show a:hover {
+    text-decoration: underline;
 }
 
 .noti {
@@ -210,18 +234,18 @@ nav {
     display: none;
     position: absolute;
     z-index: 1;
-    margin-left: -55px;
-    padding-top: 15px;
+    margin-left: -35px;
+    padding-top: 10px;
 }
 
 .drop-container{
     box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
     border-radius: 10px;
     overflow: hidden;
+    background-color: white;
 }
 
 .dropdown-button {
-    background-color: white;
     padding: 0 50px 0 10px;
     display: flex;
     align-items: center;
@@ -266,6 +290,21 @@ nav {
 .drop a {
     display: flex;
     color: black;
+}
+
+.drop-hover {
+    border-radius: 20px;
+    padding: 5px;
+    padding-left: 10px;
+}
+
+.drop:hover .drop-hover {
+    background-color: rgba(0, 0, 0, 0.03);
+}
+
+.profile-pic{
+    display: flex;
+    align-items: center;
 }
 
 a {
@@ -494,6 +533,10 @@ p {
     color: #4d4f5c;
 }
 
+.card-3 a:hover{
+    text-decoration: underline;
+}
+
 .utitle {
     display: flex;
     justify-content: space-between;
@@ -538,6 +581,7 @@ tr.title {
 .profile-info p{
     color: #4D4F5C;
 }
+
 .edit {
     background-color: #6763E3;
     border-radius: 100%;
@@ -611,26 +655,6 @@ tr.title {
 .location {
     font-size: 10px;
     color: rgba(0, 0, 0, 0.450);
-}
-
-/* media query 1025 - Desktop View */
-@media (min-width: 1025px){
-    .drop:hover .dropdown-menu {
-        display: block ;
-    }
-
-    .drop:hover a .drop-arrow {
-        transform: rotate(-180deg);
-        transition-duration: 0.1s;
-        margin-top: 2px;
-    }
-    .notification:hover .noti-dropdown-menu {
-        display: block;
-    }
-
-    .notification:hover a .green {
-        display: none;
-    }
 }
 
 /* media query 1024 - Laptop View */
@@ -720,7 +744,7 @@ tr.title {
 }
 
 /* media query 452 - Mobile View */
-@media (max-width: 452px) {
+@media (max-width: 425px) {
 
     html,body {
         max-width: 100%;
@@ -735,6 +759,22 @@ tr.title {
 
     .dash {
         padding: 30px 20px;
+    }
+
+    .drop-hover {~
+        padding:0px;
+    }
+
+    .drop:hover .drop-hover {
+        background-color: rgba(0, 0, 0, 0);
+    }
+
+    .notification:hover a img {
+        background-color: rgba(0, 0, 0, 0);
+    }
+
+    .notification a {
+        margin-right: 10px;
     }
 
     .right-nav {
@@ -765,7 +805,8 @@ tr.title {
     }
 
     .dropdown-menu {
-        margin-left: -130px;
+        margin-left: -120px;
+        padding-top: 15px;
     }
 
     .search-text {
